@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Dustbin {
 
         private String color;
-        String[] dustBin;
+        ArrayList<String> dustBin = new ArrayList<String>();
 
         public Dustbin(String color) {
                 this.color = color;
@@ -16,8 +16,8 @@ public class Dustbin {
         }
 
         public void throwOutGarbage(Garbage name) {
-                if (garbage.throwable()) {
-                        dustBin.add(garbage.getName());
+                if (true) {
+                        dustBin.add("thrown");
                 } else {
                         System.out.println("Exception");
                 }
