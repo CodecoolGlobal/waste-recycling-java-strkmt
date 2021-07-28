@@ -2,16 +2,16 @@ package com.codecool.wasterecycling;
 
 public class PaperGarbage extends Garbage {
 
-        String state;
-
         public PaperGarbage(String state, String name) {
                 this.name = name;
                 if (isSqueezed()) {
                         System.out.println("It's squeezed!");
+                        Dustbin.throwOutGarbage(name);
                 } else {
                         System.out.println("It's not squeezed!");
                         squeeze();
                         System.out.println("Now it's squeezed! How Amazing!");
+                        Dustbin.throwOutGarbage(name);
                 }
 
         }

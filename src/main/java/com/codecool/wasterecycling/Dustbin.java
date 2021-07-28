@@ -1,11 +1,11 @@
 package com.codecool.wasterecycling;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Dustbin {
 
         private String color;
-        ArrayList<String> dustBin = new ArrayList<String>();
+        private static ArrayList<String> dustBin = new ArrayList<String>();
 
         public Dustbin(String color) {
                 this.color = color;
@@ -15,12 +15,9 @@ public class Dustbin {
                 return this.color;
         }
 
-        public void throwOutGarbage(Garbage name) {
-                if (true) {
-                        dustBin.add("thrown");
-                } else {
-                        System.out.println("Exception");
-                }
+        public static void throwOutGarbage(String name) {
+                dustBin.add(name);
+                System.out.println(dustBin);
         }
 
 
