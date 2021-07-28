@@ -2,13 +2,12 @@ package com.codecool.wasterecycling;
 
 public class Garbage {
 
-        String name;
-        String state;
+        protected String name;
+        protected static String state;
 
         public Garbage(String state, String name){
                 this.name = name;
                 this.state = state;
-                Dustbin.throwOutGarbage(name);
         }
 
         public Garbage() {

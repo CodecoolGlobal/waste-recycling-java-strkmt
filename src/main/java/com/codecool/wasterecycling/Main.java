@@ -1,13 +1,16 @@
 package com.codecool.wasterecycling;
 
+import static com.codecool.wasterecycling.Dustbin.throwOutGarbage;
+
 public class Main {
 
     public static void main(String[] args) {
             Dustbin kuka = new Dustbin("Green");
             System.out.println(kuka.getColor());
-            Garbage szemet = new PlasticGarbage("sajt", "gloves");
-            Garbage szemet2 = new PaperGarbage("azaz", "box");
-            Garbage szemet3 = new Garbage("dirty", "thermonuclear house waste");
+            throwOutGarbage(new PlasticGarbage("sajt", "gloves"));
+            throwOutGarbage(new PaperGarbage("azaz", "box"));
+            throwOutGarbage(new Garbage("dirty", "thermonuclear house waste"));
+            System.out.println(Dustbin.dustBin);
 
     }
 }
